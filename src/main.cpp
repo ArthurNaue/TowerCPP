@@ -23,9 +23,6 @@ int main(void)
 	DirectionController dir7((Vector2){560, 504}, (Vector2){0, -1});
 	DirectionController dir8((Vector2){526, 136}, (Vector2){1, 0});
 
-	Tower tower((Vector2){100, 100});
-	towerList.push_back(tower);
-
 	while (!WindowShouldClose())
 	{
 		enemy.Move();
@@ -38,6 +35,8 @@ int main(void)
 		if(dir6.VerifyEnemyCollision(enemy.rec)){enemy.ChangeDirection(dir6.dir);}
 		if(dir7.VerifyEnemyCollision(enemy.rec)){enemy.ChangeDirection(dir7.dir);}
 		if(dir8.VerifyEnemyCollision(enemy.rec)){enemy.ChangeDirection(dir8.dir);}
+
+		CheckForNewTowers();
 
 		BeginDrawing();
 

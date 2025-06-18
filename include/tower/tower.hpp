@@ -18,6 +18,7 @@ class Tower
 
 extern std::vector<Tower> towerList;
 
+void CheckForNewTowers(void);
 void DrawTowers(void);
 
 #endif

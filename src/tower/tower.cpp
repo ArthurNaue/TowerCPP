@@ -12,6 +12,17 @@ void Tower::Draw(void)
 	DrawRectangleRec(rec, PWHITE);
 }
 
+void CheckForNewTowers(void)
+{
+	if(IsMouseButtonPressed(MOUSE_BUTTON_LEFT))
+	{
+		Vector2 pos = GetMousePosition();
+		pos.x -= 16; pos.y -= 16;
+
+		towerList.push_back(Tower(pos));
+	}
+}
+
 void DrawTowers(void)
 {
 	for(auto& tower : towerList)
