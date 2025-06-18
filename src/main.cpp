@@ -13,10 +13,13 @@ int main(void)
 
 	Level level(LoadImage("assets/images/level1.png"));
 
-	CreateEnemy();
-
 	while (!WindowShouldClose())
 	{
+		CreateEnemy();
+
+		CreateDirectionController();
+		CheckDirectionControllerCollision();
+
 		CheckForNewTowers();
 
 		MoveEnemies();
@@ -27,6 +30,7 @@ int main(void)
 
 		level.Draw();
 
+		DrawDirectionController();
 		DrawTowers();
 		DrawEnemies();
 

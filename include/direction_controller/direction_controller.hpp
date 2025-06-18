@@ -1,8 +1,10 @@
 #ifndef DIRECTION_CONTROLLER_HPP
 #define DIRECTION_CONTROLLER_HPP
 
+#include <vector>
 #include "raylib.h"
 #include "color_palette/color_palette.hpp"
+#include "enemy/enemy.hpp"
 
 class DirectionController
 {
@@ -11,10 +13,17 @@ class DirectionController
 
 		Vector2 dir;
 
-		bool VerifyEnemyCollision(Rectangle chosenRec);
+		void Draw(void);
+		bool VerifyEnemyCollision(Enemy enemy);
 	private:
 		Vector2 pos;
 		Rectangle rec;
 };
+
+extern std::vector<DirectionController> directionControllerList;
+
+void CreateDirectionController(void);
+void CheckDirectionControllerCollision(void);
+void DrawDirectionController(void);
 
 #endif

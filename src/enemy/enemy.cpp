@@ -26,7 +26,14 @@ void Enemy::ChangeDirection(Vector2 chosenDir)
 
 void CreateEnemy(void)
 {
-	enemyList.push_back(Enemy((Vector2){-32, 488}, (Vector2){1, 0}));
+	if(IsMouseButtonPressed(MOUSE_BUTTON_RIGHT))
+	{
+		Vector2 pos = GetMousePosition();
+		pos.x -= 16;
+		pos.y -= 16;
+
+		enemyList.push_back(Enemy(pos, (Vector2){1, 0}));
+	}
 }
 
 void MoveEnemies(void)
