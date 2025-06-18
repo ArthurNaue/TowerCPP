@@ -12,7 +12,7 @@ void Tower::Draw(void)
 	DrawRectangleRec(rec, PWHITE);
 }
 
-void CheckForNewTowers(void)
+void CreateTower(void)
 {
 	if(IsMouseButtonPressed(MOUSE_BUTTON_LEFT))
 	{

@@ -20,7 +20,7 @@ int main(void)
 		CreateDirectionController();
 		CheckDirectionControllerCollision();
 
-		CheckForNewTowers();
+		CreateTower();
 
 		MoveEnemies();
 
