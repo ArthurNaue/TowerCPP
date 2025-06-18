@@ -1,6 +1,7 @@
 #ifndef ENEMY_HPP
 #define ENEMY_HPP
 
+#include <vector>
 #include "color_palette/color_palette.hpp"
 
 class Enemy
@@ -17,5 +18,11 @@ class Enemy
 		Vector2 pos;
 		Vector2 dir;
 };
+
+void CreateEnemy(void);
+void MoveEnemies(void);
+void DrawEnemies(void);
+
+extern std::vector<Enemy> enemyList;
 
 #endif
