@@ -3,8 +3,9 @@
 #include "color_palette/color_palette.hpp" 
 #include "window_config/window_config.hpp"
 #include "level/level.hpp"
-#include "direction_controller/direction_controller.hpp"
 #include "enemy/enemy.hpp"
+#include "direction_controller/direction_controller.hpp"
+#include "tower/tower.hpp"
 
 int main(void)
 {
@@ -21,6 +22,9 @@ int main(void)
 	DirectionController dir6((Vector2){400, 520}, (Vector2){1, 0});
 	DirectionController dir7((Vector2){560, 504}, (Vector2){0, -1});
 	DirectionController dir8((Vector2){526, 136}, (Vector2){1, 0});
+
+	Tower tower((Vector2){100, 100});
+	towerList.push_back(tower);
 
 	while (!WindowShouldClose())
 	{
@@ -40,6 +44,8 @@ int main(void)
 		ClearBackground(PWHITE);
 
 		level.Draw();
+
+		DrawTowers();
 
 		enemy.Draw();
 
