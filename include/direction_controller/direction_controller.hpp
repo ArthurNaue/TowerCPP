@@ -11,7 +11,6 @@ class DirectionController
 
 		Vector2 dir;
 
-		void Draw(void);
 		bool VerifyEnemyCollision(Rectangle chosenRec);
 	private:
 		Vector2 pos;

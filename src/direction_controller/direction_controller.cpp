@@ -2,12 +2,7 @@
 
 DirectionController::DirectionController(Vector2 pos, Vector2 dir) : pos(pos), dir(dir) 
 {
-	rec = {pos.x, pos.y, 50, 50};
-}
-
-void DirectionController::Draw(void)
-{
-	DrawRectangleRec(rec, PBLACK);
+	rec = {pos.x, pos.y, 32, 32};
 }
 
 bool DirectionController::VerifyEnemyCollision(Rectangle chosenRec)

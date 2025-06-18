@@ -2,7 +2,7 @@
 
 Enemy::Enemy(Vector2 pos, Vector2 dir) : pos(pos), dir(dir)
 {
-	rec = {pos.x, pos.y, 50, 50};
+	rec = {pos.x, pos.y, 32, 32};
 }
 
 void Enemy::Draw(void)
